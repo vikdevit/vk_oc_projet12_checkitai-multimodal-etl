@@ -1,0 +1,53 @@
+# Secrets et variables d'environnement
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+secrets/
+
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.pytest_cache/
+.ruff_cache/
+.mypy_cache/
+.coverage
+htmlcov/
+
+# Environnements virtuels
+.venv/
+venv/
+env/
+
+# Jupyter
+.ipynb_checkpoints/
+
+# Donnees et fichiers volumineux
+data/
+*.parquet
+*.jsonl
+*.sqlite3
+*.db
+
+# Images et modeles telecharges
+images/raw/
+images/processed/
+models/
+*.pt
+*.pth
+*.onnx
+
+# Airflow
+airflow/logs/
+airflow/airflow.db
+airflow/airflow.cfg
+
+# Journaux
+logs/
+*.log
+
+# Fichiers systeme
+.DS_Store
+Thumbs.db

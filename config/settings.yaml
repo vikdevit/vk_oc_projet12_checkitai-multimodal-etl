@@ -1,0 +1,22 @@
+project:
+  name: "CheckIt.AI - Extraction multimodale"
+  version: "0.1.0"
+  environment: "development"
+
+paths:
+  data_root: "/mnt/data/vk_oc_projet12_checkitai-multimodal-etl"
+
+  raw: "/mnt/data/vk_oc_projet12_checkitai-multimodal-etl/raw"
+  interim: "/mnt/data/vk_oc_projet12_checkitai-multimodal-etl/interim"
+  processed: "/mnt/data/vk_oc_projet12_checkitai-multimodal-etl/processed"
+  images: "/mnt/data/vk_oc_projet12_checkitai-multimodal-etl/images"
+  reports: "/mnt/data/vk_oc_projet12_checkitai-multimodal-etl/reports"
+
+logging:
+  level: "INFO"
+  directory: "/mnt/data/vk_oc_projet12_checkitai-multimodal-etl/logs"
+
+extraction:
+  request_timeout: 30
+  max_retries: 3
+  user_agent: "CheckItAI-DataPipeline/0.1"
