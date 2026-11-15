@@ -9,7 +9,11 @@ description = "Pipeline ETL multimodal pour le projet CheckIt.AI"
 readme = "README.md"
 requires-python = ">=3.11,<3.13"
 dependencies = [
+    "pandas>=3.1.1",
+    "python-dotenv>=1.2.4",
     "pyyaml>=6.0.3",
+    "rdflib>=7.6.0",
+    "requests>=2.34.2",
 ]
 
 [project.optional-dependencies]

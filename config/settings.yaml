@@ -20,3 +20,28 @@ extraction:
   request_timeout: 30
   max_retries: 3
   user_agent: "CheckItAI-DataPipeline/0.1"
+  max_image_size_mb: 10
+  image_download_batch_size: 5
+  allowed_image_types:
+    - image/jpeg
+    - image/png
+    - image/webp
+    - image/gif
+
+sources:
+  fakeddit:
+    input_file: "fakeddit/multimodal_train.tsv"
+    chunk_size: 10000
+    max_records: 100
+    download_images: false
+  fakenewsnet:
+    chunk_size: 1000
+  newsdata:
+    max_records: 10
+    language: "fr"
+    country: "fr"
+    category: "politics"
+    query: null
+  cimple:
+    input_file: "cimplekg/data.claimreview-kg_2026_11_02.nt.gz"
+    max_records: null
