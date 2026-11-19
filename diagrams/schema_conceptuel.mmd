@@ -1,0 +1,43 @@
+erDiagram
+    SOURCE ||--o{ CONTENT_RECORD : fournit
+    CONTENT_RECORD ||--o| IMAGE_ASSET : associe
+    CONTENT_RECORD ||--o| LABEL_ASSESSMENT : qualifie
+
+    SOURCE {
+        string source_name PK
+        string source_category
+        string description
+    }
+
+    CONTENT_RECORD {
+        string publication_id PK
+        string source_name FK
+        string title
+        string text_content
+        datetime published_at
+        datetime collected_at
+        string language
+        string article_url
+        boolean has_text
+        string transformation_status
+        json source_metadata
+    }
+
+    IMAGE_ASSET {
+        string publication_id PK, FK
+        string image_url
+        string image_path
+        boolean image_valid
+        string image_status
+    }
+
+    LABEL_ASSESSMENT {
+        string publication_id PK, FK
+        string label_value
+        string label_type
+        string label_source
+        string label_status
+        string fact_check_url
+        json source_labels
+    }
+

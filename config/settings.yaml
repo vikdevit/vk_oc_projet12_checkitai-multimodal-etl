@@ -45,3 +45,13 @@ sources:
   cimple:
     input_file: "cimplekg/data.claimreview-kg_2026_11_02.nt.gz"
     max_records: null
+
+transformation:
+  input_files:
+    fakeddit: "fakeddit/fakeddit_publications.jsonl"
+    fakenewsnet: "fakenewsnet/fakenewsnet_publications.jsonl"
+    newsdata: "newsdata/newsdata_publications.jsonl"
+    cimple: "cimplekg/cimple_claim_reviews.jsonl"
+
+  clean_text: true
+  normalize_dates: true
